@@ -4,7 +4,7 @@ description: 사소한 순간의 깨달음을 모아, 꽃이 피는 첫걸음을
 url: https://revist8956.github.io/
 avatar: /avatar.jpeg
 paginate: 5
-permalink: pretty
+permalink: none
 cover_image: /bg.jpeg
 
 # Gems
@@ -28,10 +28,10 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-instagram:
-  username: revist8956
-  card: summary
-logo: logo.png
+#instagram:
+#  username: revist8956
+#  card: summary
+#logo: logo.png
 social:
   name: revist8956
   links:

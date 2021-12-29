@@ -47,13 +47,13 @@ plugins:
 # Settings for rake task
 safe: False
 lsi: False
-username: drown-salmon #github username
+username: revist8956 #github username
 repo: GitHubPageMaker #github repository
 branch: main #branch
 relative_source: ../hanuman/ #source directory
 destination: ./output/ #destination directory
-production_url:  https://drown-salmon.github.io
-source_url:  https://github.com/drown-salmon/drown-salmon.github.io #source repository url
+production_url:  https://revist8956.github.io
+source_url:  https://github.com/revist8956/revist8956.github.io #source repository url
 
 exclude:
   - README.md

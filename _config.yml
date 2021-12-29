@@ -1,6 +1,6 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
+title: Revist의 사소한 공간
+description: 사소한 순간의 깨달음을 모아, 꽃이 피는 첫걸음을 내딛는 곳.
 url: https://revist8956.github.io/
 avatar: /avatar.jpeg
 paginate: 5
@@ -28,17 +28,17 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
+instagram:
+  username: revist8956
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: revist8956
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://instagram.com/revist8956
+    - https://github.com/revist8956
 google_site_verification: xxxxx
-lang: en
+lang: en-kr
 
 sass:
   sass_dir: _sass
@@ -54,6 +54,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Ahn Jun Seong
+  url: https://github.com/revist8956
+  email: lljs1113@naver.com

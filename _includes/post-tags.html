@@ -10,7 +10,7 @@
 <div class="post-tags-section">
   <i class="post-tags-icon fas fa-tags"></i>
   <ul class="post-tags">
-    {%- for tag in page.tags -%}
+    태그: &nbsp;&nbsp;{%- for tag in page.tags -%}
       <li>
         {% assign slugified_tag = tag | slugify %}
         {%- if tags_archive_page -%}

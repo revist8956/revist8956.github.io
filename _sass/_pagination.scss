@@ -3,6 +3,14 @@
 // Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
 // there are no more previous or next posts to show.
 
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 .pagination {
   margin: 0 -1.5rem;
   color: var(--gray-500);
@@ -50,3 +58,28 @@ a.pagination-item:hover {
     }
   }
 }
+
+.pagination_prev_next {
+  @include clearfix();
+  float: left;
+  width: 100%;
+
+  &--pager {
+    margin-top: 0em;
+    padding-top: 0em;
+    display: block;
+    padding: 0.6em 2em;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #6D99E2;
+    border-radius: 5px;
+    }
+  }
+
+    .prev_next {
+      font-size: 16px;
+      color:#4c4c4c;
+    }

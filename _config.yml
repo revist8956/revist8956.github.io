@@ -1,9 +1,9 @@
 # Setup
 title: Revist의 사소한 공간
-description: 사소한 순간의 깨달음을 모아, 꽃이 피는 첫걸음을 내딛는 곳.
+description: 사소한 순간의 깨달음을 모아,<br>꽃이 피는 첫걸음을 내딛는 곳.
 url: https://revist8956.github.io/
 avatar: /avatar.jpeg
-paginate: 5
+paginate: 10
 permalink: none
 cover_image: /bg.jpeg
 
@@ -14,6 +14,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate-category
 
 # Optimize Jekyll
 exclude:
@@ -28,17 +29,17 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-#instagram:
-#  username: revist8956
-#  card: summary
-#logo: logo.png
+instagram:
+  username: revist8956
+  card: summary
+logo: logo.png
 social:
   name: revist8956
   links:
     - https://instagram.com/revist8956
     - https://github.com/revist8956
 google_site_verification: xxxxx
-lang: en-kr
+lang: 'en-uk'
 
 sass:
   sass_dir: _sass
@@ -49,11 +50,17 @@ sass:
 # Replace this value and uncomment to enable Google Analytics tracking
 # google_analytics: UA-000000-0
 
-# Replace this value and uncomment to enable Disqus
-# disqus: xxxxxx
+
+disqus: https-revist8956-github-io
 
 # Specify the author for blog posts
-author:
+revist8956:
+  username: revist8956
   name: Ahn Jun Seong
   url: https://github.com/revist8956
   email: lljs1113@naver.com
+
+# Travis-CI Settings
+safe: False
+lsi: False
+destination: ./output/

@@ -9,7 +9,6 @@
 
 .home-header {
   margin-top: -1em;
-  margin-bottom: var(--spacer-3);
 }
 
 .content {
@@ -26,6 +25,7 @@
   padding: var(--spacer);
   background: center / cover;
   height: 100vh;
+  width: 20%;
 }
 
 footer {

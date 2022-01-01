@@ -2,8 +2,10 @@
 layout: default
 ---
 
+{% include home-header.html %}
+
 <article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title" style="font-size: 2.5rem; margin-bottom: 1em;">{{ page.title }}</h1>
   <div class="post-meta">
     {%- assign date_format = site.date_format | default: "%-d %b %Y" -%}
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
@@ -31,14 +33,19 @@ layout: default
     {% include post-tags.html %}
   {% endif %}
 
-  {% if jekyll.environment == "production" and site.disqus and page.comments != false %}
-    {% include disqus.html %}
+  {% if page.categories %}
+    {% include post-categories.html %}
   {% endif %}
+
 </article>
 
-{% if site.related_posts != empty %}
+<div class = "post-pagination">
+  {% include post-pagination.html %}
+</div>
+
+<!-- {% if site.related_posts != empty %}
 <aside class="related">
-  <h2>Related posts</h2>
+  <h2 style="margin-top: 0rem;">Related posts</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
@@ -50,4 +57,8 @@ layout: default
     {% endfor %}
   </ul>
 </aside>
-{% endif %}
+{% endif %} -->
+
+ <div id = "post-disqus" class = "container">
+    {% include disqus.html %}
+  </div>

@@ -1,0 +1,24 @@
+{%- if site.data.archive -%}
+  {%- for item in site.data.archive -%}
+    {%- if item.type == "categories" -%}
+      {% assign categories_archive_page = item.url %}
+      {% break %}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+<div class="post-categories-section">
+  <i class="post-categories-icon fas fa-folder-open"></i>
+  <ul class="post-categories">
+    카테고리: &nbsp;&nbsp;{%- for category in page.categories -%}
+      <li>
+        {% assign slugified_category = category | slugify %}
+        {%- if categories_archive_page -%}
+          <a class="post-category" href="{{ categories_archive_page | relative_url }}#{{ slugified_category }}">{{ slugified_category }}</a>
+        {%- else -%}
+          <span class="post-category">{{ slugified_category }}</span>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

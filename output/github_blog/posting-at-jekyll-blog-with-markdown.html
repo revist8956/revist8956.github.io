@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en-uk">
+  
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="/assets/styles.css"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>jekyll 블로그에 포스팅 하기 (Markdown 문법) | Revist의 사소한 공간</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="jekyll 블로그에 포스팅 하기 (Markdown 문법)" />
+<meta property="og:locale" content="en_uk" />
+<meta name="description" content="jekyll 블로그에 포스팅을 하려면.. 마크다운 문법 형식을 알아야 한다. 다만 본 포스팅에서는 마크다운 문법과 HTML 태그를 혼재하여 사용할 것이다. 순수하게 마크다운 문법을 알고 싶은 사람은 마크다운 가이드를 참고하자." />
+<meta property="og:description" content="jekyll 블로그에 포스팅을 하려면.. 마크다운 문법 형식을 알아야 한다. 다만 본 포스팅에서는 마크다운 문법과 HTML 태그를 혼재하여 사용할 것이다. 순수하게 마크다운 문법을 알고 싶은 사람은 마크다운 가이드를 참고하자." />
+<link rel="canonical" href="https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html" />
+<meta property="og:url" content="https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html" />
+<meta property="og:site_name" content="Revist의 사소한 공간" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-01T17:00:00+09:00" />
+<meta name="google-site-verification" content="xxxxx" />
+<script type="application/ld+json">
+{"datePublished":"2022-01-01T17:00:00+09:00","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://revist8956.github.io//logo.png"}},"dateModified":"2022-01-01T17:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html"},"url":"https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html","description":"jekyll 블로그에 포스팅을 하려면.. 마크다운 문법 형식을 알아야 한다. 다만 본 포스팅에서는 마크다운 문법과 HTML 태그를 혼재하여 사용할 것이다. 순수하게 마크다운 문법을 알고 싶은 사람은 마크다운 가이드를 참고하자.","headline":"jekyll 블로그에 포스팅 하기 (Markdown 문법)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://revist8956.github.io//feed.xml" title="Revist의 사소한 공간" />
+</head>
+
+
+  <body>
+
+    <div class="container pure-g"><div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: rgb(40, 73, 77); color: rgb(255, 255, 255); background-image: url(/bg.jpeg);"><header class="masthead">
+  <div class="avatar"><img src="/avatar.jpeg" class="avatar-image" alt="">
+    </div>
+  <div class="masthead-title">
+    <a href="/" title="Home">Revist의 사소한 공간</a>
+  </div>
+  <div class="masthead-tagline">
+    <small>사소한 순간의 깨달음을 모아,<br>꽃이 피는 첫걸음을 내딛는 곳.</small>
+  </div><nav class="navigation">
+    <ul class="navigation-list"><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Home</a>
+      </li><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/about/">About</a>
+      </li><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/categories/">Categories</a>
+      </li></ul>
+  </nav><div class="social pure-menu pure-menu-horizontal">
+      <ul class="social-icons pure-menu-list">
+      <li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="mailto:lljs1113@naver.com">
+            <i class="fas fa-envelope" title="Email"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://instagram.com/revist8956">
+            <i class="fab fa-instagram" title="Instagram"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://github.com/revist8956">
+            <i class="fab fa-github" title="GitHub"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+</header>
+</div>
+
+      <div class="content pure-u-1 pure-u-md-1-2" style="font-family: 'Noto Sans KR';"><main>
+  <div class="home-header pure-menu pure-menu-horizontal" style="float: right;">
+  <div class="home-header-bar">
+    
+    <ul class="home-header-menu pure-menu-list" style="float:right;">
+      
+        <li class="pure-menu-item">
+          <a href="/categories/" class="pure-menu-link "">Categories</a>
+        </li>
+      
+        <li class="pure-menu-item">
+          <a href="/tags/" class="pure-menu-link "">Tags</a>
+        </li>
+      
+    </ul>
+    
+  </div>
+</div>
+
+
+<article class="post">
+  <h1 class="post-title" style="font-size: 2.5rem; margin-bottom: 1em;">jekyll 블로그에 포스팅 하기 (Markdown 문법)</h1>
+  <div class="post-meta"><time datetime="2022-01-01T17:00:00+09:00" itemprop="datePublished">1 Jan 2022</time></div>
+
+  <h2 id="jekyll-블로그에-포스팅을-하려면">jekyll 블로그에 포스팅을 하려면..</h2>
+<p>마크다운 문법 형식을 알아야 한다. 다만 본 포스팅에서는 마크다운 문법과 HTML 태그를 혼재하여 사용할 것이다. 순수하게 마크다운 문법을 알고 싶은 사람은 <a href="https://www.markdownguide.org/basic-syntax/">마크다운 가이드</a>를 참고하자.</p>
+<hr />
+
+<h2 id="구분선">구분선</h2>
+<p>구분선은 <code class="language-plaintext highlighter-rouge">&lt;hr&gt;</code> 로 나타낸다</p>
+<hr />
+<hr />
+<hr />
+
+<h2 id="줄바꿈">줄바꿈</h2>
+<p>1) 줄바꿈을 하고 싶으면 문장 뒤에 스페이스바를 두 번 &amp; 엔터해준다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Revist입니다.  
+만나서 반갑습니다.
+</code></pre></div></div>
+<p>Revist입니다.<br />
+만나서 반갑습니다.</p>
+
+<p>2) HTML 태그로는 <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code>을 사용할 수 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Revist입니다. &lt;br&gt; 만나서 반갑습니다.
+</code></pre></div></div>
+<p>Revist입니다. <br /> 만나서 반갑습니다.</p>
+<hr />
+
+<h2 id="headings">Headings</h2>
+<p>제목을 표시할 때는 Header를 사용한다. #의 개수로 크기를 설정할 수 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Heading Level 1
+## Heading Level 2
+### Heading Level 3
+#### Heading Level 4
+##### Heading Level 5
+###### Heading Level 6
+</code></pre></div></div>
+
+<h1 id="heading-level-1">Heading Level 1</h1>
+<h2 id="heading-level-2">Heading Level 2</h2>
+<h3 id="heading-level-3">Heading Level 3</h3>
+<h4 id="heading-level-4">Heading Level 4</h4>
+<h5 id="heading-level-5">Heading Level 5</h5>
+<h6 id="heading-level-6">Heading Level 6</h6>
+
+<p><br />안타깝게도 Level 7이상은 없다.</p>
+<hr />
+
+<h2 id="escape-character">Escape Character</h2>
+<p><code class="language-plaintext highlighter-rouge">\</code>를 사용하면 문법이 적용되지 않는다.</p>
+
+<p>**볼드체볼드체**</p>
+
+<p>원래 같으면 볼드체가 적용되어 <strong>볼드체볼드체</strong>로 보일텐데 문법 그대로 보여진다.</p>
+<hr />
+
+<h2 id="텍스트-강조">텍스트 강조</h2>
+<h3 id="볼드">볼드</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**볼드체로 쓰려면 이렇게!**
+&lt;strong&gt; 볼드체로 쓰려면 이렇게! &lt;/strong&gt;
+</code></pre></div></div>
+<ul>
+  <li><strong>볼드체로 쓰려면 이렇게</strong></li>
+</ul>
+
+<h3 id="기울임">기울임</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*기울이려면 이렇게!*
+&lt;em&gt; 기울이려면 이렇게! &lt;/em&gt;
+</code></pre></div></div>
+<ul>
+  <li><em>기울이려면 이렇게!</em></li>
+</ul>
+
+<h3 id="취소선">취소선</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~~나무위키~~
+&lt;del&gt; 나무위키 &lt;/del&gt;
+</code></pre></div></div>
+<ul>
+  <li><del>나무위키</del></li>
+</ul>
+
+<h3 id="밑줄">밑줄</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;u&gt;난 경기도 성남의 이재원이다!!&lt;/u&gt;
+&lt;ins&gt; 난 경기도 성남의 이재원이다!! &lt;ins&gt;
+</code></pre></div></div>
+<ul>
+  <li><u>난 경기도 성남의 이재원이다!!</u></li>
+</ul>
+
+<h3 id="하이라이트">하이라이트</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;mark&gt;난 경기도 성남의 이재원이다!!&lt;/mark&gt;
+</code></pre></div></div>
+<ul>
+  <li><mark>난 경기도 성남의 이재원이다!!</mark></li>
+</ul>
+
+<h3 id="superscript">Superscript</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>절대영도&lt;sup&gt;일격필살!!&lt;/sup&gt;
+</code></pre></div></div>
+<ul>
+  <li>절대영도<sup>일격필살!!</sup></li>
+</ul>
+
+<h3 id="subscript">Subscript</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>이건 자주 &lt;sub&gt;사용&lt;/sub&gt;하진 않을 것 같다.
+</code></pre></div></div>
+<ul>
+  <li>이건 자주 <sub>사용</sub>하진 않을 것 같다.</li>
+</ul>
+
+<h3 id="글씨-색-변경">글씨 색 변경</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span style="color:cornflowerblue;"&gt;콘플라워블루 색입니다.&lt;/span&gt;
+</code></pre></div></div>
+<ul>
+  <li><span style="color:cornflowerblue;">콘플라워블루 색입니다.</span></li>
+</ul>
+
+<h3 id="출처-표기">출처 표기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>잘 모르고 무식한 사람이 신념을 가지면 무섭습니다. --- &lt;cite&gt; 이경규 &lt;/cite&gt;
+</code></pre></div></div>
+<ul>
+  <li>잘 모르고 무식한 사람이 신념을 가지면 무섭습니다. — <cite> 이경규 </cite></li>
+</ul>
+<hr />
+
+<h2 id="각주">각주</h2>
+<p>글자 위 버튼을 누르면 각주로 이동하게 된다. 구문은 다음과 같다.</p>
+
+<p>이재원<sup id="fnref:fn-ljw" role="doc-noteref"><a href="#fn:fn-ljw" class="footnote">1</a></sup></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>이재원[^fn-ljw] 
+</code></pre></div></div>
+<p>모든 각주들은 <code class="language-plaintext highlighter-rouge">^fn-</code> 형식으로 작성된다. <code class="language-plaintext highlighter-rouge">^fn-</code>의 뒤에는 단어와 각주를 이어줄 ID를 만들어 작성해주면 된다. 그러면</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[^fn-ljw]: 병신이다.
+</code></pre></div></div>
+<p>이러한 형태로 사용할 수 있게 된다.</p>
+<hr />
+
+<h2 id="code-block">Code block</h2>
+<h3 id="인라인-코드-블록">인라인 코드 블록</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>문장 중간에 `코드를 넣고 싶을 때` 사용하면 된다.
+</code></pre></div></div>
+<p>문장 중간에 <code class="language-plaintext highlighter-rouge">코드를 넣고 싶을 때</code> 사용하면 된다.</p>
+
+<h3 id="코드-블록">코드 블록</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```언어 이름(소문자)
+적을 코드
+```
+</code></pre></div></div>
+
+<p>코드 블록은 <strong>스페이스바 4번 또는 Tab 2번</strong>으로도 표현할 수 있다.</p>
+
+<p>언어 이름까지 적으면 색깔 하이라이트가 들어간다!</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">def</span> <span class="nf">add</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="k">print</span><span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</code></pre></div></div>
+<hr />
+
+<h2 id="인용문">인용문</h2>
+<p>인용문을 만들기 위해서는 문단 앞에 <code class="language-plaintext highlighter-rouge">&gt;</code>를 넣어주면 된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; 다만 마시로의 표정에 괴로움은 보이지 않는다. 살짝 뺨을 붉히고 어쩐지 쑥스러워하는 듯한 느낌이다.
+--- &lt;cite&gt; 사쿠라장의 애완그녀 7 &lt;/cite&gt;
+</code></pre></div></div>
+<blockquote>
+  <p>다만 마시로의 표정에 괴로움은 보이지 않는다. 살짝 뺨을 붉히고 어쩐지 쑥스러워하는 듯한 느낌이다. <br />
+— <cite> 사쿠라장의 애완그녀 7 </cite></p>
+</blockquote>
+
+<p><br />
+많은 문단을 인용할 경우 문단 사이에 <code class="language-plaintext highlighter-rouge">&gt;</code>를 넣어주면 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; "지금 내가 그리고 싶은 건 소라타뿐이야."
+&gt;
+&gt; 시호를 포함한 네 학생의 손은 깔끔하게 멈춰버렸다. &lt;br&gt;
+--- &lt;cite&gt; 사쿠라장의 애완그녀 7 &lt;/cite&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p>“지금 내가 그리고 싶은 건 소라타뿐이야.”</p>
+
+  <p>시호를 포함한 네 학생의 손은 깔끔하게 멈춰버렸다. <br />
+— <cite> 사쿠라장의 애완그녀 7 </cite></p>
+</blockquote>
+
+<p><br />
+인용문 안에 다시 인용문을 넣을 수도 있다. <code class="language-plaintext highlighter-rouge">&gt;&gt;</code>를 사용해주자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; "설령 소라타가 나나미를 좋아한다고 해도, 난 소라타가 좋아."
+&gt;
+&gt;&gt; 이재원이 생일선물로 사준, --- &lt;cite&gt; 사쿠라장의 애완그녀 7 &lt;/cite&gt;
+</code></pre></div></div>
+<blockquote>
+  <p>“설령 소라타가 나나미를 좋아한다고 해도, 난 소라타가 좋아.”</p>
+
+  <blockquote>
+    <p>이재원이 생일선물로 사준, — <cite> 사쿠라장의 애완그녀 7 </cite></p>
+  </blockquote>
+</blockquote>
+<hr />
+
+<h2 id="리스트">리스트</h2>
+<h3 id="ordered-lists">Ordered Lists</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 순서가
+2. 있는
+3. 리스트
+    1. 중간에           # 4칸 스페이스 or 2 tab
+    2. 항목을
+    3. 더 넣어도
+4. 된다!!
+</code></pre></div></div>
+<ol>
+  <li>순서가</li>
+  <li>있는</li>
+  <li>리스트
+    <ol>
+      <li>중간에</li>
+      <li>항목을</li>
+      <li>더 넣어도</li>
+    </ol>
+  </li>
+  <li>된다!!</li>
+</ol>
+
+<h3 id="unordered-lists">Unordered Lists</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 이렇게 쓰나
+* 저렇게 쓰나
++ 전부 다 똑같이 나온다
+  - 물론 항목을 더 넣을 수 있다.      # 2칸 스테이스 or 1 tab
+  - 순서가 없는 리스트!
+</code></pre></div></div>
+<ul>
+  <li>이렇게 쓰나</li>
+  <li>저렇게 쓰나</li>
+  <li>전부 다 똑같이 나온다
+    <ul>
+      <li>물론 항목을 더 넣을 수도 있다.</li>
+      <li>순서가 없는 리스트!</li>
+    </ul>
+  </li>
+</ul>
+<hr />
+
+<h2 id="체크-리스트">체크 리스트</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [ ] &amp;nbsp;체크 안 됨
+- [x] &amp;nbsp;체크 됨
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /> 체크 안 됨</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /> 체크 됨</li>
+</ul>
+<hr />
+
+<h2 id="표-그리기">표 그리기</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table&gt;
+  &lt;thead&gt;         ## 표의 머리
+    &lt;tr&gt;
+      &lt;th&gt;다음에 만날 곳은?&lt;/th&gt;
+      &lt;th&gt;잠실&lt;/th&gt;
+      &lt;th&gt;평촌&lt;/th&gt;
+      &lt;th&gt;판교&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;         ## 표 결과
+    &lt;tr&gt;
+      &lt;td&gt;Total&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;         ## 표 내용
+    &lt;tr&gt;
+      &lt;td&gt;준성&lt;/td&gt;
+      &lt;td&gt;*&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;수민&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;*&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;재원&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;*&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th>다음에 만날 곳은?</th>
+      <th>잠실</th>
+      <th>평촌</th>
+      <th>판교</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>준성</td>
+      <td>*</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>수민</td>
+      <td> </td>
+      <td>*</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>재원</td>
+      <td> </td>
+      <td>*</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="링크">링크</h2>
+<h3 id="설명-없는-그냥-링크">설명 없는 그냥 링크</h3>
+<p>&lt;링크 주소&gt;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;https://instagram.com/n_s_ideology&gt;
+</code></pre></div></div>
+<p><a href="https://instagram.com/n_s_ideology">https://instagram.com/n_s_ideology</a></p>
+
+<h3 id="설명-있는-링크-주소">설명 있는 링크 주소</h3>
+<p>[링크 설명](링크 주소)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[연세대학교의 자랑 20학번 이재원 인스타그램](https://instagram.com/n_s_ideology)
+</code></pre></div></div>
+<p><a href="https://instagram.com/n_s_ideology">연세대학교의 자랑 20학번 이재원 인스타그램</a></p>
+
+<hr />
+
+<h2 id="이미지-삽입">이미지 삽입</h2>
+<p>![이미지 이름](이미지 주소)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![이재원 강림](/assets/ww.jpg)
+</code></pre></div></div>
+<p><img src="/assets/ww.jpg" alt="이재원 강림" /></p>
+
+<h3 id="이미지-크기-변경">이미지 크기 변경</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/ww.jpg" width="200" height="400"&gt;
+</code></pre></div></div>
+<p><img src="/assets/ww.jpg" width="200" height="400" /></p>
+
+<h3 id="그림-자체에-링크-걸기">그림 자체에 링크 걸기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![이미지 이름](이미지 주소)](이동하려는 링크 주소)
+
+
+또는
+
+
+&lt;a href="링크 주소"&gt; &lt;img scr="이미지 경로.jpg" width="~" heigth="~"&gt;&lt;/a&gt; 
+</code></pre></div></div>
+<p><a href="https://instagram.com/n_s_ideology"> <img src="/assets/ww.jpg" width="200" height="400" /></a></p>
+<hr />
+
+<h2 id="토글-리스트-접기펼치기">토글 리스트 (접기/펼치기)</h2>
+<p><u> 식빵맘님의 블로그를 참고했습니다. </u>     <a href="https://ansohxxn.github.io/blog/markdown/">바로가기</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;details&gt;
+&lt;summary&gt;여기를 눌러주세요&lt;/summary&gt;
+&lt;div markdown="1"&gt;
+
+&lt;span style="color:rosybrown;"&gt;에헤헤&lt;/span&gt;
+
+&lt;/div&gt;
+&lt;/details&gt;
+</code></pre></div></div>
+<details>
+<summary>여기를 눌러주세요</summary>
+<div>
+
+    <p><span style="color:rosybrown;">에헤헤</span></p>
+
+  </div>
+</details>
+
+<hr />
+
+<h2 id="버튼">버튼</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[맨 위로](#){: .btn .btn--primary }
+</code></pre></div></div>
+<p><a href="#" class="btn btn--primary">맨 위로</a></p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:fn-ljw" role="doc-endnote">
+      <p>병신이다. <a href="#fnref:fn-ljw" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+  
+    
+      <div class="post-tags-section">
+  <i class="post-tags-icon fas fa-tags"></i>
+  <ul class="post-tags">
+    태그: &nbsp;&nbsp;<li>
+        <a class="post-tag" href="/tags/#markdown">markdown</a></li><li>
+        <a class="post-tag" href="/tags/#tutorial">tutorial</a></li></ul>
+</div>
+
+  
+
+  
+    
+      <div class="post-categories-section">
+  <i class="post-categories-icon fas fa-folder-open"></i>
+  <ul class="post-categories">
+    카테고리: &nbsp;&nbsp;<li>
+        <a class="post-category" href="/categories/#github-blog">github-blog</a></li></ul>
+</div>
+
+  
+
+</article>
+
+<div class = "post-pagination">
+  
+
+
+  
+    
+    
+    
+    
+    
+
+
+
+
+</div>
+
+<!--  -->
+ <div id = "post-disqus" class = "container">
+    <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-revist8956-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div>
+</main>
+
+<footer class="footer"><small>
+    &copy; 2022 . All rights reserved.
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/vszhub/not-pure-poole">Not Pure Poole</a>.
+  </small>
+</footer>
+</div>
+      <div class="sidebar-right pure-u-1 pure-u-md-1-4">
+<div  class="toc-wrapper">
+  <h2 class="toc-title">Contents</h2>
+    <nav class="toc-nav">
+      <ul class="toc">
+  <li><a href="#jekyll-블로그에-포스팅을-하려면">jekyll 블로그에 포스팅을 하려면..</a></li>
+  <li><a href="#구분선">구분선</a></li>
+  <li><a href="#줄바꿈">줄바꿈</a></li>
+  <li><a href="#headings">Headings</a></li>
+  <li><a href="#heading-level-2">Heading Level 2</a>
+    <ul>
+      <li><a href="#heading-level-3">Heading Level 3</a></li>
+    </ul>
+  </li>
+  <li><a href="#escape-character">Escape Character</a></li>
+  <li><a href="#텍스트-강조">텍스트 강조</a>
+    <ul>
+      <li><a href="#볼드">볼드</a></li>
+      <li><a href="#기울임">기울임</a></li>
+      <li><a href="#취소선">취소선</a></li>
+      <li><a href="#밑줄">밑줄</a></li>
+      <li><a href="#하이라이트">하이라이트</a></li>
+      <li><a href="#superscript">Superscript</a></li>
+      <li><a href="#subscript">Subscript</a></li>
+      <li><a href="#글씨-색-변경">글씨 색 변경</a></li>
+      <li><a href="#출처-표기">출처 표기</a></li>
+    </ul>
+  </li>
+  <li><a href="#각주">각주</a></li>
+  <li><a href="#code-block">Code block</a>
+    <ul>
+      <li><a href="#인라인-코드-블록">인라인 코드 블록</a></li>
+      <li><a href="#코드-블록">코드 블록</a></li>
+    </ul>
+  </li>
+  <li><a href="#인용문">인용문</a></li>
+  <li><a href="#리스트">리스트</a>
+    <ul>
+      <li><a href="#ordered-lists">Ordered Lists</a></li>
+      <li><a href="#unordered-lists">Unordered Lists</a></li>
+    </ul>
+  </li>
+  <li><a href="#체크-리스트">체크 리스트</a></li>
+  <li><a href="#표-그리기">표 그리기</a></li>
+  <li><a href="#링크">링크</a>
+    <ul>
+      <li><a href="#설명-없는-그냥-링크">설명 없는 그냥 링크</a></li>
+      <li><a href="#설명-있는-링크-주소">설명 있는 링크 주소</a></li>
+    </ul>
+  </li>
+  <li><a href="#이미지-삽입">이미지 삽입</a>
+    <ul>
+      <li><a href="#이미지-크기-변경">이미지 크기 변경</a></li>
+      <li><a href="#그림-자체에-링크-걸기">그림 자체에 링크 걸기</a></li>
+    </ul>
+  </li>
+  <li><a href="#토글-리스트-접기펼치기">토글 리스트 (접기/펼치기)</a></li>
+  <li><a href="#버튼">버튼</a></li>
+</ul>
+
+  </nav>
+</div>
+
+</div>
+    </div>
+
+    <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script><script>
+  function strip(str, remove) {
+    while (str.length > 0 && remove.indexOf(str.charAt(0)) != -1) {
+      str = str.substr(1);
+    }
+    while (str.length > 0 && remove.indexOf(str.charAt(str.length - 1)) != -1) {
+      str = str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+
+  function scroll() {
+    console.log('scroll');
+    window.scrollTo({
+      left: 0, 
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+    sessionStorage.removeItem('forceCheckScroll');
+  }
+
+  const forceCheckScroll = sessionStorage.getItem('forceCheckScroll') === 'true';
+  const checkScroll = strip(window.location.pathname, '/') !== strip('', '/');
+
+  if (forceCheckScroll || checkScroll) {
+    const maxWidth = "(max-width: 48rem)";
+    const result = window.matchMedia(maxWidth);
+    if (result.matches) {
+      scroll();
+    } else {
+      result.addListener((match) => {
+        if (match.media == maxWidth) {
+          if (match.matches) {
+            scroll();
+          }
+        }
+      });
+    }
+  }
+</script>
+</body>
+</html>

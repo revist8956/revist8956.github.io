@@ -15,9 +15,9 @@
 {% endfor %}
 
 {% if prev_post or next_post %}
+  <hr>
   <nav class="pagination_prev_next">
-    <hr>
-    <p style="font-size: 15px; margin-bottom: 0em;"> 현재 카테고리 내 다른 글 보러가기</p>
+    <p style="font-size: 15px; margin-bottom: 0em; color: #5d5d5d"> 현재 카테고리 내 다른 글 보러가기</p>
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination_prev_next--pager"><span class="prev_next">이전 글  &nbsp&nbsp&nbsp</span>{{ prev_post.title }}</a>
     {% endif %}
@@ -26,3 +26,4 @@
     {% endif %}
   </nav>
 {% endif %}
+

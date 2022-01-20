@@ -1,6 +1,6 @@
 ---
 layout: post
-title: jekyll 블로그에 포스팅 하기 (Markdown 문법)
+title: -[Markdown] Jekyll 블로그에 포스팅 하기
 date: 2022-01-01 16:00 +0800
 tags: [markdown, tutorial]
 categories: github_blog

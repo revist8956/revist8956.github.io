@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-uk"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://revist8956.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://revist8956.github.io//" rel="alternate" type="text/html" hreflang="en-uk" /><updated>2022-01-03T00:30:14+09:00</updated><id>https://revist8956.github.io//feed.xml</id><title type="html">Revist의 사소한 공간</title><subtitle>사소한 순간의 깨달음을 모아,&lt;br&gt;꽃이 피는 첫걸음을 내딛는 곳.</subtitle><entry><title type="html">jekyll 블로그에 포스팅 하기 (Markdown 문법)</title><link href="https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html" rel="alternate" type="text/html" title="jekyll 블로그에 포스팅 하기 (Markdown 문법)" /><published>2022-01-01T17:00:00+09:00</published><updated>2022-01-01T17:00:00+09:00</updated><id>https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown</id><content type="html" xml:base="https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html">&lt;h2 id=&quot;jekyll-블로그에-포스팅을-하려면&quot;&gt;jekyll 블로그에 포스팅을 하려면..&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-uk"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://revist8956.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://revist8956.github.io//" rel="alternate" type="text/html" hreflang="en-uk" /><updated>2022-01-05T23:07:38+09:00</updated><id>https://revist8956.github.io//feed.xml</id><title type="html">Revist의 소소한 공간</title><subtitle>소소한 순간의 깨달음을 모아,&lt;br&gt;꽃이 피는 첫걸음을 내딛는 곳.</subtitle><entry><title type="html">-[Python] 거꾸로 출력하기</title><link href="https://revist8956.github.io//python/reversing-str-at-python.html" rel="alternate" type="text/html" title="-[Python] 거꾸로 출력하기" /><published>2022-01-02T17:00:00+09:00</published><updated>2022-01-02T17:00:00+09:00</updated><id>https://revist8956.github.io//python/reversing-str-at-python</id><content type="html" xml:base="https://revist8956.github.io//python/reversing-str-at-python.html">&lt;h2 id=&quot;문자열-거꾸로-출력하기--리스트-튜플&quot;&gt;문자열 거꾸로 출력하기 (+ 리스트, 튜플)&lt;/h2&gt;
+
+&lt;p&gt;문자열을 거꾸로 출력하는 방식은 다양하다. &lt;br /&gt;
+예를 들어 “안녕하세요” 라는 문자열을 “요세하녕안”으로 바꾸고 싶다고 가정하자.&lt;br /&gt;
+&lt;br /&gt;
+가장 기본적으로 for문을 사용하는 경우가 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = '안녕하세요'
+a_reverse = ''   # 역순으로 담아줄 빈 문자열 생성
+
+for i in a:
+	a_reverse = i + a_reverse
+
+print(a_reverse)   # 요세하녕안
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+파이썬에서는 거꾸로 출력하는 함수를 제공하기도 한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = '안녕하세요'
+print(reversed(a))      # iterator 객체로 반환
+
+print(&quot;&quot;.join(reversed(a)))   #요세하녕안
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;문자열에서 reversed 함수를 사용하려면 join과 함께 사용하여야 한다.
+&lt;sub&gt;+) reverse 함수는 list 형식에서만 가능&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+하지만 slicing을 통해서 더욱 간편하게 만들 수도 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = '안녕하세요'
+print(a[::-1])     #요세하녕안
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;reversed 함수는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;str&lt;/code&gt;뿐만 아니라 리스트, 튜플에도 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a = [1,2,3]     # 리스트
+b = (1,2,3)     # 튜플
+
+print(list(reversed(a)))      # [3,2,1]
+print(tuple(reversed(a)))     # (3,2,1)
+
+print(a)					# 원형은 바뀌지 않는다.
+print(b)					# 원형은 바뀌지 않는다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[::-1]&lt;/code&gt; 인덱스 역시 리스트, 튜플에도 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;li = ['a', 'b', 'c', 'd', 'e']
+tu = ('a', 'b', 'c', 'd')
+
+print(li[::-1])          # ['e', 'd', 'c', 'b', 'a']
+print(tu[::-1])          # ('d', 'c', 'b', 'a')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="python" /><category term="python" /><category term="grammar" /><summary type="html">문자열 거꾸로 출력하기 (+ 리스트, 튜플)</summary></entry><entry><title type="html">-[Markdown] Jekyll 블로그에 포스팅 하기</title><link href="https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html" rel="alternate" type="text/html" title="-[Markdown] Jekyll 블로그에 포스팅 하기" /><published>2022-01-01T17:00:00+09:00</published><updated>2022-01-01T17:00:00+09:00</updated><id>https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown</id><content type="html" xml:base="https://revist8956.github.io//github_blog/posting-at-jekyll-blog-with-markdown.html">&lt;h2 id=&quot;jekyll-블로그에-포스팅을-하려면&quot;&gt;jekyll 블로그에 포스팅을 하려면..&lt;/h2&gt;
 &lt;p&gt;마크다운 문법 형식을 알아야 한다. 다만 본 포스팅에서는 마크다운 문법과 HTML 태그를 혼재하여 사용할 것이다. 순수하게 마크다운 문법을 알고 싶은 사람은 &lt;a href=&quot;https://www.markdownguide.org/basic-syntax/&quot;&gt;마크다운 가이드&lt;/a&gt;를 참고하자.&lt;/p&gt;
 &lt;hr /&gt;
 
